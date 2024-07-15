@@ -1,0 +1,69 @@
+.cardsList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+
+  &.multi {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+    .cardsItem {
+      width: 47.435%;
+      aspect-ratio: 185 / 115;
+
+      &:nth-child(2n + 1) {
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.cardsItem {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 390 / 187;
+}
+
+.cardsLink {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+
+  width: 100%;
+  height: 100%;
+
+  text-decoration: none;
+
+  span {
+    color: #FFF5D9;
+
+    font-size: 1.375rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}
+
+.cardsImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.opacity {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+  background-color: #080909;
+  opacity: .8;
+}

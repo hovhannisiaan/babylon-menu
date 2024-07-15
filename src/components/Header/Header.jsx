@@ -7,9 +7,9 @@ const Header = () => {
     return (
         <header className={styles.header}>
             <div className={`${styles.headerContainer} page-container`}>
-                <div className={styles.logoContianer}>
+                <div className={styles.logoContainer}>
                     <div className="img-container">
-                        <Image className={styles.logo} src={logoImg} alt="logo" width={57.81} height={61}/>
+                        <Image src={logoImg} alt="logo" width={57.81} height={61}/>
                     </div>
                 </div>
             </div>

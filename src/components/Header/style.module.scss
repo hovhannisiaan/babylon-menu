@@ -1,0 +1,22 @@
+.header {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #080909;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoContainer {
+  position: relative;
+  width: 14.823%;
+
+  &::after {
+    content: '';
+    display: block;
+    padding-top: 105.518%;
+  }
+}
