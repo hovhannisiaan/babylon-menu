@@ -13,9 +13,9 @@ const Cards = ({data, multiCol = false}) => {
                 return (
                     <li key={i} className={styles.cardsItem}>
                         <Link className={styles.cardsLink} href={el.link}>
-                                    <span className={inriaSerif.className}>
-                                        {el.name}
-                                    </span>
+                            <span className={inriaSerif.className}>
+                                {el.name}
+                            </span>
                         </Link>
                         <Image className={styles.cardsImage} src={el.img} alt={el.name} width={100}
                                height={100}/>

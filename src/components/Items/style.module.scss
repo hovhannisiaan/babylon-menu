@@ -1,0 +1,30 @@
+.prods {
+  list-style-type: none;
+  padding: 1.25rem;
+}
+
+.prodsItem {
+  border-top: 1px solid #D6C086;
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 0.25rem;
+
+  span {
+    color: white;
+
+    font-size: 0.75rem;
+    text-transform: uppercase;
+
+    &:first-child {
+      color: #FFF5D9;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+}
+
+
+
