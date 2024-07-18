@@ -30,16 +30,7 @@ const Prods = ({data}) => {
                                 {el.name}
                             </span>
                         <span>
-                                {
-                                    Array.isArray(finalData) ?
-                                        finalData.map((el, i) => {
-                                            return (
-                                                <React.Fragment key={i}>
-                                                    {el} /
-                                                </React.Fragment>
-                                            )
-                                        }) : finalData
-                                }
+                                {el.price}
                             </span>
                     </li>
                 )
