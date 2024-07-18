@@ -4,12 +4,10 @@
 }
 
 .prodsItem {
-  border-top: 1px solid #D6C086;
   display: flex;
   justify-content: space-between;
 
-  padding-top: 0.25rem;
-
+  
   span {
     color: white;
 
@@ -22,7 +20,9 @@
   }
 
   &:not(:last-child) {
+    border-bottom: 1px solid #D6C086;
     margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem
   }
 }
 

@@ -5,8 +5,11 @@ import Prods from "@/components/Items/Items";
 import styles from './style.module.scss';
 
 const Page = ({params}) => {
-    const data = barCategories.find(el => el.name = params.drinks);
-    console.log(data)
+    let data = [];
+    const param = params.drinks.split('-').join(' ')
+
+    data = barCategories.find(el => el.name === param);
+
     return (
         <div className={styles.barInner}>
             <div className="page-container">

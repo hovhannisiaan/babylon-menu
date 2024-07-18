@@ -5,11 +5,22 @@ import {Inria_Serif} from "next/font/google";
 const inriaSerif = Inria_Serif({subsets: ['latin'], weight: ['400']});
 
 const Prods = ({data}) => {
+    let finalData;
     data.forEach(el => {
-        el.price = el.price + '';
-        el.price = el.price.replace(/\B(?=(\d{3})+(?!\d))/g, ".")
-    })
+        if (Array.isArray(el.price)) {
+            finalData = [];
+            el.price.map(element => {
+                let n = element + '';
+                n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                console.log(n + 'n')
+                finalData.push(n)
+            })
 
+        } else {
+            el.price = el.price + '';
+            finalData = el.price.replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+        }
+    })
     return (
         <ul className={styles.prods}>
             {data.map((el, i) => {
@@ -19,7 +30,16 @@ const Prods = ({data}) => {
                                 {el.name}
                             </span>
                         <span>
-                                {el.price}
+                                {
+                                    Array.isArray(finalData) ?
+                                        finalData.map((el, i) => {
+                                            return (
+                                                <React.Fragment key={i}>
+                                                    {el} /
+                                                </React.Fragment>
+                                            )
+                                        }) : finalData
+                                }
                             </span>
                     </li>
                 )
